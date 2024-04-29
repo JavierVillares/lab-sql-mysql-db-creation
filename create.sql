@@ -1,11 +1,11 @@
-CREATE DATABASE lab_mysql;
+CREATE DATABASE IF NOT EXISTS lab_mysql;
 
 USE lab_mysql;
 
 DROP TABLE IF EXISTS cars;
 CREATE TABLE cars (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    VIN CHAR(17) NOT NULL,
+    vin VARCHAR(30),
     manufacturer VARCHAR(30) NOT NULL,
     model VARCHAR(20) NOT NULL,
     dates INT NOT NULL,
@@ -15,8 +15,7 @@ CREATE TABLE cars (
 DROP TABLE IF EXISTS customers;
 USE lab_mysql;
 CREATE TABLE customers (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    cust_id VARCHAR(20) NOT NULL,
+    cust_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     cust_name VARCHAR(100) NOT NULL,
     cust_phone VARCHAR(20) NOT NULL,
     cust_email VARCHAR(100),
@@ -48,6 +47,6 @@ CREATE TABLE invoice (
     customer INT NOT NULL,
     salesperson INT NOT NULL,
     FOREIGN KEY (car) REFERENCES cars (id) ON DELETE CASCADE,
-    FOREIGN KEY (customer) REFERENCES customers (id) ON DELETE CASCADE,
+    FOREIGN KEY (customer) REFERENCES customers (cust_id) ON DELETE CASCADE,
     FOREIGN KEY (salesperson) REFERENCES salespersons(id) ON DELETE CASCADE
 );
