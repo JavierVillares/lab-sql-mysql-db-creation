@@ -1,3 +1,3 @@
 USE lab_mysql;
 DELETE FROM cars
-	WHERE id = 4;
+WHERE id = 4;
