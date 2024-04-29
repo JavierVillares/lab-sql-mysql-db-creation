@@ -48,10 +48,7 @@ CREATE TABLE invoice (
     car INT NOT NULL,
     customer INT NOT NULL,
     salesperson INT NOT NULL,
-    FOREIGN KEY (car) 
-    REFERENCES cars (id) ON DELETE CASCADE,
-    FOREIGN KEY (customer) 
-    REFERENCES customers (id) ON DELETE CASCADE,
-    FOREIGN KEY (salesperson) 
-    REFERENCES salespersons(id) ON DELETE CASCADE
+    FOREIGN KEY (car) REFERENCES cars (id) ON DELETE CASCADE,
+    FOREIGN KEY (customer) REFERENCES customers (id) ON DELETE CASCADE,
+    FOREIGN KEY (salesperson) REFERENCES salespersons(id) ON DELETE CASCADE
 );
