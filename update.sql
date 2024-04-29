@@ -12,3 +12,5 @@ UPDATE customers
 SET cust_email = 'hello@napoleon.me'
 WHERE cust_name = 'Napoléon Bonaparte';
 SET SQL_SAFE_UPDATES = 1;
+select * 
+from customers
