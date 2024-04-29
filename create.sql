@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS lab_mysql;
+CREATE DATABASE lab_mysql;
 
 USE lab_mysql;
 
