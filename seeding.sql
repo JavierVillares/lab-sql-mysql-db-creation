@@ -24,11 +24,6 @@ Values (1,	00001,	'Petey Cruiser','Madrid'),
 (7, 00007, 'Walter Melon', 'Amsterdam' ),
 (8, 00008, 'Shonda Leer', 'São Paulo' );
 
-INSERT INTO invoice (id, invoice_number, date, car, customer, salesperson)
-VALUES 
-(1, 852399038, '2018-08-22', 1, 1, 3),
-(2, 731166526, '2018-12-31', 3, 3, 5),
-(3, 271135104, '2019-01-22', 2, 2, 7);
 
 select * 
-FROM customers
+FROM invoice
