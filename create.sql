@@ -7,10 +7,10 @@ USE lab_mysql;
 DROP TABLE IF EXISTS cars;
 CREATE TABLE cars (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    VIN CHAR(17) NOT NULL,
+    VIN VARCHAR(30) NOT NULL,
     manufacturer VARCHAR(30) NOT NULL,
     model VARCHAR(20) NOT NULL,
-    dates INT NOT NULL,
+    car_year SMALLINT UNSIGNED,
     color VARCHAR(20)
 );
 
